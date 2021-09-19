@@ -11,15 +11,13 @@
 
 程式碼練習
 
-# bash
-
 ```bash=
+# bash
 # 提交這次的修改
 $ git commit -m "正確填寫這次 commit 的資訊"
 ```
 
-# javascript
-
 ```javascript
+# javascript
 console.log("test");
 ```
