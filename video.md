@@ -1,7 +1,7 @@
 # 影片心得
 
-[hachMD 版](https://hackmd.io/@sye5VVeOT5GwXfPMg-hIdg/H1sSoaNQK)
-[MarkDown 語法參考](https://ed521.github.io/2019/08/hexo-markdown/)
+[hachMD 版](https://hackmd.io/@sye5VVeOT5GwXfPMg-hIdg/H1sSoaNQK)<br>
+[MarkDown 語法參考](https://ed521.github.io/2019/08/hexo-markdown/)<br>
 影片主要為導引<font color=#008000><u>**大腦解鎖**</u></font>這本書的內容，作者為史丹佛大學-數學教育系的 Jo Boaler，將他多年的教學心得濃縮成這本書。影片的主題是討論「大腦」，主要利用心理學研究的角度以及實際的實驗來闡述如何開發大腦，進而提升學習效率。
 
 其實我本身不太愛看這類型的影片，感覺像在給自己灌心靈雞湯，但看完後有改變我一點想法。影片有提到很多我曾經感覺到的事情，像是小時候成績不錯時，遇到不懂的問題而不敢去問同學，還有大學四年都臨時抱佛腳，考完後都忘光之類的。於是就會有種心有戚戚焉的感覺會想要看下去。
