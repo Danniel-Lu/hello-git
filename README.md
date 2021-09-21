@@ -61,7 +61,7 @@ $ git init
 
 會在這個 hello-git 內建立了 .git 檔案夾，之後所有關於 git 管理的資訊都會存在這個檔案夾。
 
-Q: 如果 hello-git 這個檔案夾(專案) 不想再被 git 管理了？
+Q: 如果 hello-git 這個檔案夾(專案) 不想再被 git 管理了？<br>
 A: 直接把整個 .git 檔案夾刪掉 `rm -r .git`
 
 ![](https://i.imgur.com/iYbhwu4.png)
@@ -84,56 +84,95 @@ A: 直接把整個 .git 檔案夾刪掉 `rm -r .git`
 - **staged** (等待被 commit 的，代表下次執行 git commit 會將這些檔案全部送入版本庫)
   [圖片參考網址](https://ithelp.ithome.com.tw/articles/10134531)
 
+查看 git 的狀態
+
 ```bash=
-# 查看 git 的狀態
 $ git status
+```
 
-# 把檔案加入
+把檔案加入
+
+```bash=
 $ git add <file>
+```
 
-# 提交這次的修改
+提交這次的修改
+
+```bash=
 $ git commit -m "正確填寫這次 commit 的資訊"
+```
 
-# 檢視這次修改的差異
-# 工作目錄與暫存區域的比較
+檢視這次修改的差異
+工作目錄與暫存區域的比較
+
+```bash=
 $ git diff <file>
+```
 
-# 暫存區域與儲存庫的比較
+暫存區域與儲存庫的比較
+
+```bash=
 $ git diff --cached <file>
+```
 
-# 已經加入過的檔案，又有修改的話，一樣要再 add 一次，才可以 commit
+已經加入過的檔案，又有修改的話，一樣要再 add 一次，才可以 commit
+
+```bash=
 $ git add <file>
 $ git commit -m "xxxx"
-# 針對已經加入過的檔案，可以直接用以下指令提交
-# 這邊的 -a 代表 add
+```
+
+針對已經加入過的檔案，可以直接用以下指令提交
+這邊的 -a 代表 add
+
+```bash=
 $ git commit -am "xxxxx"
+```
 
-# 可以「反悔」加入暫存區
+可以「反悔」加入暫存區
+
+```bash=
 $ git restore --staged <file>
+```
 
-# 反悔剛剛的修改
-# 以前的指令是checkout
-# 連刪除檔案也可以反悔
+反悔剛剛的修改
+以前的指令是 checkout
+連刪除檔案也可以反悔
+
+```bash=
 $ git restore <file>
+```
 
-# 將刪除狀態加入暫存區
-# rm 跟 add 都可以，因為git是更新狀態
+將刪除狀態加入暫存區
+rm 跟 add 都可以，因為 git 是更新狀態
+
+```bash=
 $ git rm/add <file>
+```
 
-# 讓檔案回到某個特定版本
-# <commit> 通常是複製6~7碼，重複的機率很低
+讓檔案回到某個特定版本
+\<commit> 通常是複製 6~7 碼，重複的機率很低
+
+```bash=
 $ git checkout <commit> test.txt
+```
 
-# 讓檔案回復到前兩個版本
+讓檔案回復到前兩個版本
+
+```bash=
 $ git checkout HEAD~2 test.txt
-# 回到現在版本
+```
+
+回到現在版本
+
+```bash=
 $ git checkout HEAD
 ```
 
 - Untracked files: 代表還沒加入給 git 管的檔案(不是每個檔案都要給 git 管)
 - git 的單位不是檔案，而是每次的修改。
 
-`git log` 相關指令
+#### `git log` 相關指令
 
 ```bash=
 # 查看提交紀錄
@@ -166,7 +205,7 @@ $ git blame test.txt
 
 預設分支: master / main
 
-> Github 預設為 main，所以用 main 比較好
+> Github 預設為 main，所以用 main 比較好<br>
 
 ### **把 git 預設分支改成 main**
 
@@ -183,7 +222,7 @@ $ nano ~/.gitconfig
         defaultBranch = main
 ```
 
-如果 hello-git 已經是 master 的話可以執行以下指令把主分支改成 main：
+如果 hello-git 已經是 master 的話可以執行以下指令把主分支改成 main
 
 ```bash=
 $ git branch -m master main
@@ -242,7 +281,7 @@ _ex: main 有增加 h1，login 有增加 input_
 | cls     | clear       | 清除畫面上的內容                         |
 | cat     | cat         | 印出檔案內容                             |
 
-> [color=#14849e]**windows 的 Git Bash 可以用 Mac 的指令**
+> **windows 的 Git Bash 可以用 Mac 的指令**
 
 ```bash=
 # 建立 hello-git 檔案夾
@@ -277,13 +316,13 @@ ls -l
 ls -al
 ```
 
-**參數可以使用多個**
-參數的意義，不同指令會不一樣，但通常會是這樣
--a => all 全部--------ex: ls -a 列出全部檔案（列出隱藏檔）
--r => recursive ->可以刪除每一層資料夾
--f => force 強制 \* => 全部
-/ => 根目錄
-ex: rm -rf /\* =>電腦會變磚塊，不能亂下
+**參數可以使用多個**<br>
+參數的意義，不同指令會不一樣，但通常會是這樣<br>
+-a => all 全部--------ex: ls -a 列出全部檔案（列出隱藏檔<br>
+-r => recursive ->可以刪除每一層資料夾<br>
+-f => force 強制 \* => 全部<br>
+/ => 根目錄<br>
+ex: rm -rf /\* =>電腦會變磚塊，不能亂下<br>
 
 ```bash
 . 目前的檔案夾位置
