@@ -323,9 +323,7 @@ git push -u origin main
 - coding style 有沒有符合我們團隊的規範
 - 看看這次的程式有沒有什麼可能的問題，例如效能問題
 
-[](https://i.imgur.com/rV7GdFn.png)
-
----
+## ![](https://i.imgur.com/rV7GdFn.png)
 
 ## 0. 常用的終端機指令
 
