@@ -267,6 +267,66 @@ _ex: main 有增加 h1，login 有增加 input_
 當發 pull request 的時候，有衝突，要求開發的人回到自己的電腦，
 把 main merge 進去 login 一次，再 push 一次這個 login。
 
+# git hub 教學
+
+## 7. 建立 github repo
+
+1. 在 repositories 畫面按右邊綠色的 new 按鈕
+2. 輸入專案名稱
+3. **public**: 大家都看的到 **private**: 可以決定誰看的到
+4. 可以選用 HTTPS 或 SSH，目前我們是使用 HTTPS
+
+#### 在 github 上建立一個 github repo
+
+```bash=
+git remote add origin https://github.com/Danniel-Lu/hello-git.git
+```
+
+- remote: 遠端
+- add: 增加
+- origin: 是這個遠端的名字，可以不要叫做 origin，但建議不要改
+- https://github.com/Danniel-Lu/hello-git.git: 就是那個遠端 repo 的網址
+
+```bash=
+#通常第一次push要加 -u (-u:做紀錄的意思,upstream)
+git push -u origin main
+```
+
+- push: 推送程式碼到遠端去，而且是推到 origin 這個遠端，要推送的分支是 main
+
+---
+
+## 任務 8: 撰寫 readme
+
+像是 github 專案下面會出現的文字說明就是 README.md 檔
+
+> README.md 通常都是大寫表示
+>
+> https://markdown.tw/
+
+使用 Markdown 語法撰寫 readme 檔案
+
+- 介紹專案
+- 解釋專案怎麼安裝
+- 解釋專案怎麼使用
+- ...
+
+---
+
+## 任務 9: 了解 git flow
+
+要合併分支，會在 github 發 pull request，再請另外一個同事幫忙做 code review。
+
+- 測試看看要合併的這個分支功能是否正常
+  - 測試哪些情境？
+  - 開發工程師的產出是程式碼
+- coding style 有沒有符合我們團隊的規範
+- 看看這次的程式有沒有什麼可能的問題，例如效能問題
+
+![](https://i.imgur.com/rV7GdFn.png)
+
+---
+
 ## 0. 常用的終端機指令
 
 | Windows | MacOS/Linux | 說明                                     |
@@ -314,6 +374,10 @@ ls -l
 
 # 以完整格式列出所有的檔案
 ls -al
+
+# 顯示人類比較看得懂的單位 ex.KB,MB,GB...
+# ex. ls-alh 原本會顯示2112 bytes 加了 -h 會變成 2.1K
+ls -h
 ```
 
 **參數可以使用多個**<br>
